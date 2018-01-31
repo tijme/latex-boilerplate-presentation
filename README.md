@@ -17,16 +17,12 @@ This runs [*pdflatex*, *pdflatex*, *pdflatex*], a command that is available by d
 
 ## The Document Structure
 
-* appendices/ *(add all your appendices here)*
-    * **example_image1.tex**
-    * **example_image2.tex**
-    * ***[another appendix]*.tex**
 * assets/ *(add all your assets here)*
     * **image1.jpg**
     * **image2.jpg**
     * **frontpage.png**
     * ***[another asset]*.png**
-* chapters/ *(add all your chapters here)*
+* section/ *(add all your section here)*
     * **example_text.tex**
     * **example_math.tex**
     * **example_code.tex**
@@ -37,9 +33,6 @@ This runs [*pdflatex*, *pdflatex*, *pdflatex*], a command that is available by d
     * **globals.tex** *(variables/settings)*
     * **style.sty** *(the document style/design)*
 * **main.tex** *(defines the document structure)*
-* **titlepage.tex** *(the title page)*
-* **copyright.tex** *(the copyright page)*
-* **abstract.tex** *(the abstract/summary)*
 * **references.bib** *(the references library)*
 
 ## Issues

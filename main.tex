@@ -1,0 +1,89 @@
+\documentclass{beamer}
+
+\include{config/globals}
+\usepackage{config/style}
+
+%----------------------------------------------------------------------------------------
+%	Set the global variables (see ./config/globals.tex if you want to change something)
+%----------------------------------------------------------------------------------------
+
+\title[\presentationTitleShort]{\presentationTitleLong}
+\author[\presentationAuthorNameShort]{\presentationAuthorNameLong}
+\institute[\presentationUniversityShort]{\presentationUniversityLong \\ \medskip \textit{\presentationAuthorEmail}}
+\date{\today}
+
+%----------------------------------------------------------------------------------------
+%	Set the presentation theme
+%----------------------------------------------------------------------------------------
+
+\mode<beamer>{
+	\usetheme{\presentationTheme}
+	\useoutertheme[subsection=true]{miniframes}
+	\usefonttheme[onlymath]{serif}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{headline}
+	{%
+		\begin{beamercolorbox}[ht=3.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{section in head/foot}
+			\usebeamerfont{section in head/foot}\usebeamercolor[fg]{section in head/foot}%
+			\insertsectionhead
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[colsep=1.5pt]{middle separation line head}
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+			\usebeamerfont{subsection in head/foot}\insertsubsectionhead
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+		\end{beamercolorbox}
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	Show a title slide between every chapter
+%----------------------------------------------------------------------------------------
+
+\AtBeginSubsection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		\usebeamerfont{title}\insertsectionhead\par
+		\usebeamerfont{subtitle}\insertsubsectionhead\par
+		\vfill
+	\end{frame}
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	The title page
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	The table of contents
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	The chapters
+%----------------------------------------------------------------------------------------
+
+\include{sections/introduction}
+\include{sections/examples}
+\include{sections/conclusion}
+
+%----------------------------------------------------------------------------------------
+%	The final slide
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+\end{document}
